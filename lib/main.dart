@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const NetflixCloneApp());
 
@@ -17,6 +18,9 @@ class NetflixCloneApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,
           elevation: 0,
+        ),
+        textTheme: GoogleFonts.nunitoSansTextTheme(
+          ThemeData.dark().textTheme,
         ),
       ),
       home: const MainScreen(),
@@ -173,13 +177,13 @@ class _MainScreenState extends State<MainScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           // Logo Netflix
-                          const Text(
+                          Text(
                             'NETFLIX',
-                            style: TextStyle(
-                              color: Color(0xFFE50914),
+                            style: GoogleFonts.bebasNeue(
+                              color: const Color(0xFFE50914),
                               fontWeight: FontWeight.bold,
-                              fontSize: 28,
-                              letterSpacing: 2,
+                              fontSize: 32,
+                              letterSpacing: 3,
                             ),
                           ),
                           Row(
@@ -224,25 +228,26 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     // Contenido central
                     const SizedBox(height: 80),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
                       child: Text(
                         'Películas y series ilimitadas\ny mucho más',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 42,
+                          fontWeight: FontWeight.w700,
                           height: 1.2,
                         ),
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
+                    Text(
                       'A partir de 5/28.90. Cancela cuando quieras.',
-                      style: TextStyle(
+                      style: GoogleFonts.roboto(
                         color: Colors.white,
                         fontSize: 18,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                     const SizedBox(height: 15),
@@ -328,9 +333,10 @@ class _MainScreenState extends State<MainScreen> {
                   child: Text(
                     'Tendencias',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 26,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
+                      letterSpacing: 0.5,
                     ),
                   ),
                 ),
@@ -412,12 +418,13 @@ class _MainScreenState extends State<MainScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Más motivos para unirte',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w700,
                     color: Colors.white,
+                    letterSpacing: 0.5,
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -441,12 +448,13 @@ class _MainScreenState extends State<MainScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Preguntas frecuentes',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700,
                     color: Colors.white,
+                    letterSpacing: 0.5,
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -832,12 +840,12 @@ class _MainScreenState extends State<MainScreen> {
                             right: 20,
                             child: Text(
                               movie['title']!.toUpperCase(),
-                              style: const TextStyle(
-                                fontSize: 32,
-                                fontWeight: FontWeight.bold,
+                              style: GoogleFonts.oswald(
+                                fontSize: 36,
+                                fontWeight: FontWeight.w700,
                                 color: Colors.white,
-                                letterSpacing: 2,
-                                shadows: [
+                                letterSpacing: 3,
+                                shadows: const [
                                   Shadow(
                                     color: Colors.black,
                                     offset: Offset(0, 2),
@@ -982,19 +990,20 @@ class _MainScreenState extends State<MainScreen> {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style: GoogleFonts.inter(
                     fontSize: 22,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
                     color: Colors.white,
                   ),
                 ),
                 const SizedBox(height: 12),
                 Text(
                   description,
-                  style: const TextStyle(
+                  style: GoogleFonts.openSans(
                     fontSize: 15,
                     color: Colors.white70,
-                    height: 1.4,
+                    height: 1.5,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
