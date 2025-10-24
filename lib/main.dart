@@ -101,6 +101,29 @@ class _MainScreenState extends State<MainScreen> {
     },
   ];
 
+  final List<Map<String, dynamic>> benefitCards = [
+    {
+      'title': 'Disfruta en tu TV',
+      'description': 'Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.',
+      'icon': Icons.tv,
+    },
+    {
+      'title': 'Descarga tus series para verlas offline',
+      'description': 'Guarda tu contenido favorito y siempre tendrás algo para ver.',
+      'icon': Icons.download_rounded,
+    },
+    {
+      'title': 'Disfruta donde quieras',
+      'description': 'Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.',
+      'icon': Icons.devices,
+    },
+    {
+      'title': 'Crea perfiles para niños',
+      'description': 'Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, gratis con tu membresía.',
+      'icon': Icons.child_care,
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -398,252 +421,18 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                // Card 1: Disfruta en tu TV
-                Container(
-                  padding: const EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Color(0xFF192247),
-                        Color(0xFF0F1835),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(16),
+                // Generar todas las tarjetas dinámicamente
+                ...benefitCards.map((card) => Padding(
+                  padding: const EdgeInsets.only(bottom: 15),
+                  child: _buildBenefitCard(
+                    card['title'] as String,
+                    card['description'] as String,
+                    card['icon'] as IconData,
                   ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Disfruta en tu TV',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(height: 12),
-                            Text(
-                              'Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white70,
-                                height: 1.4,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.pink.withOpacity(0.3),
-                              Colors.purple.withOpacity(0.3),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Icon(Icons.tv, size: 50, color: Colors.pink[300]),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 15),
-                // Card 2: Descarga tus series
-                Container(
-                  padding: const EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Color(0xFF192247),
-                        Color(0xFF0F1835),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Descarga tus series para verlas offline',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(height: 12),
-                            Text(
-                              'Guarda tu contenido favorito y siempre tendrás algo para ver.',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white70,
-                                height: 1.4,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.pink.withOpacity(0.3),
-                              Colors.purple.withOpacity(0.3),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Icon(Icons.download_rounded, size: 50, color: Colors.pink[300]),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 15),
-                // Card 3: Disfruta donde quieras
-                Container(
-                  padding: const EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Color(0xFF192247),
-                        Color(0xFF0F1835),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Disfruta donde quieras',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(height: 12),
-                            Text(
-                              'Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white70,
-                                height: 1.4,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.pink.withOpacity(0.3),
-                              Colors.purple.withOpacity(0.3),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Icon(Icons.devices, size: 50, color: Colors.pink[300]),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 15),
-                // Card 4: Crea perfiles para niños
-                Container(
-                  padding: const EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Color(0xFF192247),
-                        Color(0xFF0F1835),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Crea perfiles para niños',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(height: 12),
-                            Text(
-                              'Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, gratis con tu membresía.',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white70,
-                                height: 1.4,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.pink.withOpacity(0.3),
-                              Colors.purple.withOpacity(0.3),
-                            ],
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Icon(Icons.child_care, size: 50, color: Colors.pink[300]),
-                      ),
-                    ],
-                  ),
-                ),
+                )).toList(),
               ],
             ),
           ),
-
-          // --- Sección Series Populares ---
-          sectionTitle('Series populares'),
-          movieCarousel(movies),
-
-          // --- Sección Series Populares ---
-          sectionTitle('Series populares'),
-          movieCarousel(movies),
-
-          // --- Sección Recomendadas ---
-          sectionTitle('Recomendadas para ti'),
-          movieCarousel(movies),
 
           // --- Preguntas frecuentes ---
           Container(
@@ -1167,6 +956,65 @@ class _MainScreenState extends State<MainScreen> {
           color: Colors.white,
           fontSize: 13,
         ),
+      ),
+    );
+  }
+
+  Widget _buildBenefitCard(String title, String description, IconData icon) {
+    return Container(
+      padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xFF192247),
+            Color(0xFF0F1835),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  description,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    color: Colors.white70,
+                    height: 1.4,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 20),
+          Container(
+            padding: const EdgeInsets.all(15),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.pink.withOpacity(0.3),
+                  Colors.purple.withOpacity(0.3),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(icon, size: 50, color: Colors.pink[300]),
+          ),
+        ],
       ),
     );
   }
