@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Map<String, String>> movies = [
     {
       'title': 'La Casa de Papel',
-      'image': 'https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400',
+      'image': 'https://i.ebayimg.com/images/g/yfIAAOSwtYdhjGu8/s-l1200.jpg?w=400',
       'year': '2021',
       'rating': '16+',
       'type': 'Serie',
@@ -47,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
     },
     {
       'title': 'Las Guerreras K-POP',
-      'image': 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400',
+      'image': 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTPInBEph1iMEi2q7RSKOsoZlKexxEAh_fitoYf9slw38WQL-WMXvZTVeyPtthEHXofSBVB56GO4-qH5Yelo6OEdME54qIvvtwzwZdG3lGiBkPf_b_prRKpYox4xN27Un_WY3Q.jpg?r=49b?w=400',
       'year': '2025',
       'rating': '10+',
       'type': 'Película',
@@ -56,7 +56,7 @@ class _MainScreenState extends State<MainScreen> {
     },
     {
       'title': 'El Juego del Calamar',
-      'image': 'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=400',
+      'image': 'https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABWkngpyoPyufx7E05fGiyFFqYg2ONU0HEfKa6zBKeLy7sTlnBzCDw3PxBsl2fCTUoWegGBHIgPfN37sL8sOzlo1uSenk16JXbKVQEfCMYLnqyjHfnZ9zX7h5UMmjA3n_heFPfQ.jpg?r=609?w=400',
       'year': '2023',
       'rating': '18+',
       'type': 'Serie',
@@ -65,7 +65,7 @@ class _MainScreenState extends State<MainScreen> {
     },
     {
       'title': 'Stranger Things',
-      'image': 'https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400',
+      'image': 'https://m.media-amazon.com/images/I/91miBpFYN5L.jpg?w=400',
       'year': '2022',
       'rating': '14+',
       'type': 'Serie',
@@ -111,7 +111,7 @@ class _MainScreenState extends State<MainScreen> {
             children: [
               // Imagen de fondo
               Image.network(
-                'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqnvF3a1A-q9UQutnz2DPBr65QX20769hJdJW2PCRPmwutpCbl66U2JGMuUPsfPKvfWjQ&usqp=CAU?w=1200',
                 width: double.infinity,
                 height: 600,
                 fit: BoxFit.cover,
